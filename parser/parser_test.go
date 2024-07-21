@@ -65,6 +65,7 @@ func TestReturnStatements(t *testing.T) {
 
 		if !ok {
 			t.Errorf("Statement not a return statement, got =%T", stmt)
+			continue
 		}
 		if returnStatement.TokenLiteral() != "return" {
 			t.Errorf("Token Literal not 'return' but got =%s", returnStatement.TokenLiteral())
